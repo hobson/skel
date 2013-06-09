@@ -1,16 +1,86 @@
 {
 	"color_scheme": "Packages/Color Scheme - Default/IDLE.tmTheme",
-	"font_size": 8,
+	"file_exclude_patterns":
+	[
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.pdf",
+		"*.psd",
+		"*.png",
+		"*.gif",
+		"*.jpg",
+		"*.fla",
+		"*.swf",
+		"*.jar",
+		"*.wav",
+		"*.ogg",
+		"*.eot",
+		"*.ttf",
+		"*.svg",
+		"*.zip",
+		"*.otf",
+		"*.woff",
+		"*.bz2",
+		"\"",
+		"*.gz",
+		"*.tif",
+		"*.bmp",
+		"*.xls",
+		"*.doc",
+		".mov",
+		".mpeg",
+		"celerybeat-schedule",
+		"_generated_media",
+		"collected_static"
+	],
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		"db",
+		"collected_static"
+	],
+	"color_scheme": "Packages/Color Scheme - Default/IDLE.tmTheme",
     "tab_size": 4,
     "detect_slow_plugins": false,
     "translate_tabs_to_spaces": true,
 	"ignored_packages":
+	"font_size": 10.0,
+	"ignored_packages":
 	[
 		"Vintage"
 	],
+	"open_files_in_new_window": true,
 	"pep8_ignore":
 	[
 		"E501"
 	],
-	"sublimelinter_gutter_marks": true
+	"sublimelinter": true,
+    "sublimelinter_mark_style": "none",  /* none, outline or fill */
+    // Whether lines with errors/warnings will have gutter marks (black dot in lefthand margin near line numbers).
+    "sublimelinter_gutter_marks": true,
+	"sublimelinter_fill_outlines": false,
+	"sublimelinter_popup_errors_on_save": false,
+	"sublimelinter_delay": 5,
+	"show_full_path": true,
+	"tab_completion": true,
+	"tab_size": 4,
+	"translateTabsToSpaces": true,
+	"translate_tabs_to_spaces": true
 }
