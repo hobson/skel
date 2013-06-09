@@ -3,3 +3,8 @@
 **/*secret*/**
 **/*secret*
 OSX/Users/hobs/.bashrc
+# meld mergetool tmp files
+*.BACKUP.*.*
+*.BASE.*.*
+*.LOCAL.*.*
+*.REMOTE.*.*
