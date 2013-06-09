@@ -1,0 +1,16 @@
+{
+	"color_scheme": "Packages/Color Scheme - Default/IDLE.tmTheme",
+	"font_size": 8,
+    "tab_size": 4,
+    "detect_slow_plugins": false,
+    "translate_tabs_to_spaces": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"pep8_ignore":
+	[
+		"E501"
+	],
+	"sublimelinter_gutter_marks": true
+}
