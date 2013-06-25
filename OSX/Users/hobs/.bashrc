@@ -133,9 +133,22 @@ function parse_hg_branch {
   hg branch 2> /dev/null | sed -e 's/\(.*\)/\ hg\ \1/'
 }
 
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    ;;
+*)
+    ;;
+esac
+
+# PS1="$PS1\[\033[00;32m\]\$(parse_git_branch)\[\033[00m\]
+# \$"
+
+
 # # 32m = green, 00m returns to default color
-PS1="$PS1\[\033[0;32m\]\$(parse_git_branch)\[\033[00m\]
- \$ "
+#PS1="$PS1\[\033[0;32m\]\$(parse_git_branch)\[\033[00m\]
+ # \$ "
 # 35m = purple
 # PS1="$PS1\[\033[0;35m\]\$(parse_hg_branch)\[\033[00m\]
 # \$ "
