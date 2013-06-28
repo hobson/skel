@@ -59,9 +59,9 @@ shopt -s histappend histreedit histverify
 # could probably also record the pwd (cwd) using the variable that is storing the directories for back and pushd and popd or $PWD
 #echo "Prompt command: '${PROMPT_COMMAND}'" # /etc/bash.bashrc already contains a prompt command that saves/syncs history
 # export PROMPT_COMMAND='echo "# cd $PWD" >> ~/.bash_history; '$PROMPT_COMMAND
-# export PROMPT_COMMAND='echo "# cd $PWD" >> ~/.bash_history_forever; '$PROMPT_COMMAND
-# export PROMPT_COMMAND="history -a; history -c; history -r; history 1 >> ~/.bash_history_forever; $PROMPT_COMMAND"
-# readonly PROMPT_COMMAND
+export PROMPT_COMMAND='echo "# cd $PWD" >> ~/.bash_history_forever; '$PROMPT_COMMAND
+export PROMPT_COMMAND="history -a; history -c; history -r; history 1 >> ~/.bash_history_forever; $PROMPT_COMMAND"
+readonly PROMPT_COMMAND
 
 export PROJECT_HOME="$HOME/src"
 export PROJECT_HOME_ALT="$HOME/flint-projects"
@@ -135,7 +135,7 @@ esac
 force_color_prompt=yes
 
 function parse_git_branch {
- git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/*\(.*\)/\ \[\1\]/'
+ git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/*[ \t]\(.*\)/\1/'
 }
 
 if [ -n "$force_color_prompt" ]; then
