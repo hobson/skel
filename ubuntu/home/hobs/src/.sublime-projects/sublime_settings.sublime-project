@@ -1,0 +1,14 @@
+{
+	"folders":
+	[
+		{
+			"path": "/home/hobs/.config/sublime-text-2/Settings"
+		},
+		{
+			"path": "/home/hobs/.config/sublime-text-2/Packages/User"
+		},
+		{
+			"path": "/home/hobs/.config/sublime-text-2/Packages/SublimeLinter"
+		}
+	]
+}
