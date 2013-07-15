@@ -1,0 +1,41 @@
+#!/bin/bash
+# This hook is run when a virtualenv is activated 
+
+
+export PROJECT_HOME_BEFORE_VENV=$PROJECT_HOME
+export PWD_BEFORE_VENV=$(pwd)
+
+# don't use $WORKON_HOME in case this script is in a particular VENV
+# TODO: use path of the current bash script
+if [ -f $(which find_project_dir.py) ]; then
+    PRJDIR=$(find_project_dir.py)
+    PRJNAME=$(basename $PRJDIR)
+    cd "$PRJDIR"
+    # TODO, look for ~/src/sublime-projects/PRJ_NAME.sublime-project and load it rather than the entire PRJ dir
+    if [ -f $(which sublime) ]; then
+        if [ -f "${HOME}/src/.sublime-projects/${PRJNAME}.sublime-project" ]; then
+            sublime --project "${HOME}/src/.sublime-projects/${PRJNAME}.sublime-project" &
+        else
+            sublime . &
+        fi
+    fi
+fi
+
+
+# #export PROJECT_HOME=$HOME/flint-projects
+# PROJECT_HOMES="$PROJECT_HOME_ALT" "$PROJECT_HOME"
+# for prjhome in $PROJECT_HOMES; do
+#   for subdir in django src; do
+#       echo "$proj_home/$proj_name/$subdir/.git"
+#       if [ -d "$proj_home/$proj_name/$subdir/.git" ]; then
+#         cd "$proj_home/$proj_name/$subdir"
+#         break 2
+#       fi
+#   done
+  
+#   echo "$proj_home/$proj_name/.git"
+#   if [ -d "$proj_home/$proj_name/.git" ]; then
+#     cd "$proj_home/$proj_name"
+#     break 1
+#   fi
+# done
