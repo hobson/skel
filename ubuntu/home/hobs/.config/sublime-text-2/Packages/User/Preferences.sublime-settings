@@ -1,5 +1,44 @@
 {
 	"color_scheme": "Packages/Color Scheme - Default/IDLE.tmTheme",
+	"detect_slow_plugins": true,
+	"font_size": 9,
+
+	"sublimelinter": true,
+    "sublimelinter_mark_style": "none",  /* none, outline or fill */
+    // Whether lines with errors/warnings will have gutter marks (black dot in lefthand margin near line numbers).
+    "sublimelinter_gutter_marks": true,
+	"sublimelinter_fill_outlines": false,
+	"sublimelinter_popup_errors_on_save": false,
+	"sublimelinter_delay": 5,
+
+	"show_full_path": true,
+
+	"tab_completion": true,
+	"tab_size": 4,
+	"translateTabsToSpaces": true,
+	"translate_tabs_to_spaces": true,
+	// "word_wrap": true,
+	// "wrap_width": 120
+
+	"indent_subsequent_lines": true,
+	"pep8_ignore":
+	[
+		"E501"
+	],
+
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		"db",
+		"collected_static"
+	],
 	"file_exclude_patterns":
 	[
 		"*.pyc",
@@ -46,41 +85,5 @@
 		"celerybeat-schedule",
 		"_generated_media",
 		"collected_static"
-	],
-	"folder_exclude_patterns":
-	[
-		".svn",
-		".git",
-		".hg",
-		"CVS",
-		"db",
-		"collected_static"
-	],
-	"color_scheme": "Packages/Color Scheme - Default/IDLE.tmTheme",
-    "tab_size": 4,
-    "detect_slow_plugins": false,
-    "translate_tabs_to_spaces": true,
-	"ignored_packages":
-	"font_size": 10.0,
-	"ignored_packages":
-	[
-		"Vintage"
-	],
-	"open_files_in_new_window": true,
-	"pep8_ignore":
-	[
-		"E501"
-	],
-	"sublimelinter": true,
-    "sublimelinter_mark_style": "none",  /* none, outline or fill */
-    // Whether lines with errors/warnings will have gutter marks (black dot in lefthand margin near line numbers).
-    "sublimelinter_gutter_marks": true,
-	"sublimelinter_fill_outlines": false,
-	"sublimelinter_popup_errors_on_save": false,
-	"sublimelinter_delay": 5,
-	"show_full_path": true,
-	"tab_completion": true,
-	"tab_size": 4,
-	"translateTabsToSpaces": true,
-	"translate_tabs_to_spaces": true
+	]
 }
