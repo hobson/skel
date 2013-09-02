@@ -2,6 +2,7 @@
 # This hook is run after every virtualenv is activated.
 import os.path
 from os import environ
+from sys import argv
 
 
 def expand_path(*paths):
@@ -24,7 +25,7 @@ def expand_path(*paths):
     return os.path.abspath(os.path.realpath(os.path.expandvars(os.path.expanduser(os.path.join(*paths)))))
 
 
-def find_project_dir(project_homes=None, proj_subdirs=None, verbose=False):
+def find_project_dir(project_name=None, project_homes=None, proj_subdirs=None, verbose=False):
     """Return the full, absolute path to a directory containing what looks like a source code project (git, svn, bzr repo or Django project)
 
     >>> find_project_dir(project_homes=['~/this_cant_possibly_exist/and/contain/a/project/$SHELL'], verbose=False)  # doctest: +ELLIPSIS
@@ -39,10 +40,15 @@ def find_project_dir(project_homes=None, proj_subdirs=None, verbose=False):
     workon_proj_file = environ.get('VIRTUALENVWRAPPER_PROJECT_FILENAME')  # typically '.project'
     workon_home = environ.get('WORKON_HOME')  # typically ~/.virtualenvs
 
-    proj_name = os.path.basename(environ.get('VIRTUAL_ENV', ''))
+    if project_name:
+        proj_name = str(project_name)
+    else:
+        proj_name = os.path.basename(environ.get('VIRTUAL_ENV', ''))
+    
     try:
         with open(expand_path(workon_home, proj_name, workon_proj_file), 'rUb') as fpin:
             found_path = fpin.read().strip('\n')
+            return found_path
     except:
         found_path = None
 
@@ -83,6 +89,7 @@ def main(argv=None):
     """
     from sys import stdout, stderr
 
+    # stderr.write(repr(argv) + '\n')
     project_homes = None  # ['~/src', '~/flint-projects', '~/bin', '~/projects', '~/sublime-projects', '~']
     proj_subdirs = None
 
@@ -93,9 +100,10 @@ def main(argv=None):
             del(argv[argv.index(verbosity)])
             verbose = True
     if argv and len(argv) >= 2:
-        project_homes = argv[1].split()
+        project_name = argv[1]
 
-    found_path = find_project_dir(project_homes=project_homes, proj_subdirs=proj_subdirs, verbose=verbose)
+    found_path = find_project_dir(project_name=project_name, project_homes=project_homes, proj_subdirs=proj_subdirs, verbose=verbose)
+    # stderr.write(found_path + '\n')
     if found_path:
         stdout.write(found_path)
         # Don't attempt to os.chdir here, because subprocesses aren't allowed to affect the parent env

@@ -11,7 +11,7 @@
 			"file": "/home/hobs/src/skel/ubuntu/home/hobs/bin/find_project_dir.py",
 			"settings":
 			{
-				"buffer_size": 4533,
+				"buffer_size": 4775,
 				"line_ending": "Unix"
 			}
 		}
@@ -48,6 +48,9 @@
 	},
 	"file_history":
 	[
+		"/home/hobs/src/skel/ubuntu/home/hobs/bin/find_project_dir.py",
+		"/media/sda1/ssd/home/hobs/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/home/hobs/src/skel/ubuntu/home/hobs/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 		"/media/sda1/ssd/home/hobs/src/tagim/tagim-script.py",
 		"/media/sda1/ssd/home/hobs/src/tagim/tg/naive__init__.py",
 		"/media/sda1/ssd/home/hobs/src/tagim/tg/__init__.py",
@@ -63,7 +66,6 @@
 		"/home/hobs/flint-projects/core/django/bpd/data/DataModelMaster.csv",
 		"/home/hobs/flint-projects/core/django/libs/dal/xsd2models.py",
 		"/media/sda1/ssd/home/hobs/.config/sublime-text-2/Packages/User/Python.sublime-settings",
-		"/media/sda1/ssd/home/hobs/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 		"/home/hobs/flint-projects/core/django/libs/dal/webutil.py",
 		"/home/hobs/flint-projects/core/django/libs/dal/decorators.py",
 		"/media/sda1/ssd/home/hobs/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
@@ -84,7 +86,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
 			""
@@ -154,15 +156,15 @@
 					"file": "/home/hobs/src/skel/ubuntu/home/hobs/bin/find_project_dir.py",
 					"settings":
 					{
-						"buffer_size": 4533,
+						"buffer_size": 4775,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3221,
-								3221
+								0,
+								0
 							]
 						],
 						"settings":
@@ -261,7 +263,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 678.0,
+						"translation.y": 1260.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
