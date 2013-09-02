@@ -8,3 +8,7 @@ OSX/Users/hobs/.bashrc
 *.BASE.*.*
 *.LOCAL.*.*
 *.REMOTE.*.*
+*.sublime-workspace
+*.pyc
+*.o
+*.dll

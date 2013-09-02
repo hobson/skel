@@ -14,6 +14,14 @@
 				"buffer_size": 4775,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "/home/hobs/src/skel/install.sh",
+			"settings":
+			{
+				"buffer_size": 383,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
@@ -148,7 +156,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -264,6 +272,32 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 1260.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/hobs/src/skel/install.sh",
+					"settings":
+					{
+						"buffer_size": 383,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								381,
+								381
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
