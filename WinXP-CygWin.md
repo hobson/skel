@@ -45,3 +45,8 @@ Put these in C:/Documents and Settings/laneh/Application Data/Sublime Text 2/Pac
         ]
     }
 
+
+# per http://cygwin.com/ml/cygwin/2012-10/msg00066.html 
+# set the CYGWIN env variable to make symlinks work on both types of machines
+
+    CYGWIN=winsymlinks
