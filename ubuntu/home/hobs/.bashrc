@@ -203,13 +203,12 @@ fi
 # HL: shell variable containing list of paths to append to PATH
 MOREUSERPATHS=("." "/usr/share/fslint/fslint" "${HOME}/bin" "${HOME}/bin/python-scripts")
 for p in ${MOREUSERPATHS[*]}; do # Interestingly indexing with [*] or [@] seem to do the same thing.
- if [ -d ${p} ] ; then
-     echo "Adding to PATH -- $p"
-     export PATH="${p}:${PATH}"
- else
-   echo "Error: Couldn't find $p !!!!!!!!"
-   echo "       Unable to add $p to PATH."
- fi
+  if [ -d ${p} ]; then
+    echo "Adding to PATH -- $p"
+    export PATH="${p}:${PATH}"
+  else
+    echo "Warning: Unable to find path $p so it wasn't added to \$PATH"
+  fi
 done
 
 ##export PYTHONPATH='/home/hobs/.ipython'
