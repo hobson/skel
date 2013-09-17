@@ -3,8 +3,15 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	source /etc/bashrc
+fi
+
+
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
+
 
 echo "Running customized ~/.bashrc script: '$0' ......."
 
@@ -227,6 +234,9 @@ DATE=`date +"${HOBSTIMEFORMAT}"`
 echo "Finished running $USER's customized bash configuration script:  '$0'."
 
 
+if [ -f /usr/local/heroku/heroku ]; then
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+fi

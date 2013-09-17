@@ -29,7 +29,7 @@ Alternatively, if you just have on problematic script:
 
 
 
-# Some nice sublime settings
+# Add some nice sublime settings
 
 Put these in C:/Documents and Settings/laneh/Application Data/Sublime Text 2/Packages/User/Preferences.sublime-settings
 
@@ -44,6 +44,14 @@ Put these in C:/Documents and Settings/laneh/Application Data/Sublime Text 2/Pac
         "Vintage"
         ]
     }
+
+# even better, hard link your sublime User settings to the skel project version
+
+mkdir -P ~/src
+cd ~/src
+git clone git@github.com:hobsonlane/skel.git
+ln /home/laneh/src/skel/ubuntu/home/hobs/.config/sublime-text-2/Packages/User/Preferences.sublime-settings "/cygdrive/c/Documents and Settings/laneh/Application
+Data/Sublime Text 2/Packages/User/"
 
 
 # per http://cygwin.com/ml/cygwin/2012-10/msg00066.html 
