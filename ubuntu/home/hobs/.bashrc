@@ -104,9 +104,6 @@ shopt -s extglob        # Necessary for programmable completion.
 shopt -s globstar
 
 
-# need a local variable for $HOME in order to avoid potential security issues when using $HOME or ~/ in aliases (hacker redirects $HOME?)
-export SAFEHOME="/home/hobs"
-
 #export GDFONTPATH="/usr/share/fonts/truetype/ttf-bitstream-vera"
 #export GNUPLOT_DEFAULT_GDFONT="Vera.ttf"
 export GDFONTPATH="/usr/share/fonts/truetype/ttf-dejavu"
@@ -114,8 +111,8 @@ export GNUPLOT_DEFAULT_GDFONT="DejaVuSans.ttf"
 # yii stuff
 export webroot="/var/www"
 export wwwroot="/var/www"
-#export YIIFRAMEWORK="${SAFEHOME}/src/yii-read-only/framework"
-#export YIIROOT="${SAFEHOME}/src/yii-read-only"
+#export YIIFRAMEWORK="${HOME}/src/yii-read-only/framework"
+#export YIIROOT="${HOME}/src/yii-read-only"
 
 
 # check the window size after each command and, if necessary,
@@ -177,7 +174,7 @@ PS1="$PS1\[\033[00;32m\]\$(parse_git_branch)\[\033[00m\]
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-    test -r ${SAFEHOME}/.dircolors && eval "$(dircolors -b ${SAFEHOME}/.dircolors)" || eval "$(dircolors -b)"
+    test -r ${HOME}/.dircolors && eval "$(dircolors -b ${HOME}/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
     alias grep='grep --color=auto'
     alias pgrep='grep --color=auto --perl-regexp'
@@ -190,8 +187,8 @@ fi
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ${SAFEHOME}/.bash_aliases ]; then
-    source ${SAFEHOME}/.bash_aliases
+if [ -f ${HOME}/.bash_aliases ]; then
+    source ${HOME}/.bash_aliases
 fi
 
 ## enable programmable completion features (you don't need to enable
@@ -204,7 +201,7 @@ fi
 # already done in /etc/bash.bashrc
 
 # HL: shell variable containing list of paths to append to PATH
-MOREUSERPATHS=("." "/usr/share/fslint/fslint" "${SAFEHOME}/bin" "${SAFEHOME}/bin/python-scripts")
+MOREUSERPATHS=("." "/usr/share/fslint/fslint" "${HOME}/bin" "${HOME}/bin/python-scripts")
 for p in ${MOREUSERPATHS[*]}; do # Interestingly indexing with [*] or [@] seem to do the same thing.
  if [ -d ${p} ] ; then
      echo "Adding to PATH -- $p"
@@ -216,7 +213,7 @@ for p in ${MOREUSERPATHS[*]}; do # Interestingly indexing with [*] or [@] seem t
 done
 
 ##export PYTHONPATH='/home/hobs/.ipython'
-#MOREUSERPYTHONPATHS=("$SAFEHOME/bin/python-scripts" "$SAFEHOME/src/tagim" "$SAFEHOME/src/tagim/tg" "$SAFEHOME/src/pyexiv2" )
+#MOREUSERPYTHONPATHS=("$HOME/bin/python-scripts" "$HOME/src/tagim" "$HOME/src/tagim/tg" "$HOME/src/pyexiv2" )
 #for p in ${MOREUSERPYTHONPATHS[*]}; do # Interestingly indexing with [*] or [@] seem to do the same thing.
 #  if [ -d ${p} ] ; then
 #      echo "Adding to PYTHONPATH -- $p"
