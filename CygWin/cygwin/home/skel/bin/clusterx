@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+XWin :0 -clipboard& DISPLAY=:0.0 ssh -Y -f sasuser@172.29.226.117 gnome-session
+
