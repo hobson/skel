@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# -C = compressed traffic
+# -Y = trusted X configuration (instead of -X)
+# XWin :0 -clipboard& && DISPLAY=:0.0 ssh -Y -C -f Hobson@172.29.227.100 gnome-session
+
+# The one-liner above sometimes has to be run twice for gnome-session to launch and connect
+# But putting a sleep between the xstart (x-server) and client gnome-session fixes it
+
+XWin :0 -clipboard&
+sleep 1 && DISPLAY=:0.0 ssh -Y -C -f Hobson@172.29.227.100 gnome-session
+
+
