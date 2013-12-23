@@ -1,0 +1,7 @@
+[push]
+	default = simple
+[user]
+	name = Hobson Lane
+	email = hobsonlane@gmail.com
+[merge]
+	tool = meld
