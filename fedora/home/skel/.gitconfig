@@ -5,3 +5,5 @@
 	email = hobsonlane@gmail.com
 [merge]
 	tool = meld
+[core]
+	editor = sublime
