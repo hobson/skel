@@ -215,6 +215,10 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto --extended-regexp'
 fi
 
+# required in order to ensure that ipython launches WITHIN a venv rather than using system ipython package:
+alias ipy="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
+alias ipython="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
+
 #######################################################
 
 
