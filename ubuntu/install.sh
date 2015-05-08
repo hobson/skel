@@ -11,3 +11,9 @@ ln -s "$HOME/src/skel/ubuntu/home/hobs/.bashrc" "$HOME/.bashrc"
 sudo add-apt-repository ppa:thefanclub/grive-tools
 sudo apt-get update -y
 sudo apt-get install -y grive-tools
+
+mkdir ~/tmp
+cd ~/tmp
+wget https://linux.dropbox.com/packages/ubuntu/dropbox_2015.02.12_amd64.deb
+sudo apt-get install dropbox_2015.02.12_amd64.deb
+
